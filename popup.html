@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Favicon Downloader</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <svg class="header-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+      </svg>
+      <h1>favicon-dl</h1>
+    </div>
+
+    <div class="favicon-section">
+      <div class="preview-wrapper">
+        <div id="favicon-preview" class="preview-container">
+          <div class="preview-placeholder">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+            </svg>
+          </div>
+        </div>
+        <div class="favicon-info">
+          <div class="label">Source</div>
+          <div class="value" id="favicon-url">-</div>
+        </div>
+      </div>
+
+      <div class="section-title">Download Formats</div>
+      <div class="formats-grid">
+        <label class="format-option">
+          <input type="checkbox" name="format" value="16" checked>
+          <span class="format-label">16×16</span>
+          <span class="format-size">ICO</span>
+        </label>
+        <label class="format-option">
+          <input type="checkbox" name="format" value="32" checked>
+          <span class="format-label">32×32</span>
+          <span class="format-size">ICO</span>
+        </label>
+        <label class="format-option">
+          <input type="checkbox" name="format" value="original" checked>
+          <span class="format-label">Original</span>
+          <span class="format-size">ORIG</span>
+        </label>
+        <label class="format-option">
+          <input type="checkbox" name="format" value="svg">
+          <span class="format-label">Vector</span>
+          <span class="format-size">SVG</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button id="download-btn" class="btn btn-primary">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+        </svg>
+        Download Selected
+      </button>
+
+      <button id="copy-url-btn" class="btn btn-secondary">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+        </svg>
+        Copy URL
+      </button>
+
+      <button id="open-tab-btn" class="btn btn-secondary">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+        </svg>
+        Open in New Tab
+      </button>
+    </div>
+
+    <div id="status"></div>
+
+    <div class="divider"></div>
+
+    <div class="metadata" id="metadata">
+      <div class="metadata-row">
+        <span class="metadata-label">Format:</span>
+        <span class="metadata-value" id="meta-format">-</span>
+      </div>
+      <div class="metadata-row">
+        <span class="metadata-label">Dimensions:</span>
+        <span class="metadata-value" id="meta-dimensions">-</span>
+      </div>
+      <div class="metadata-row">
+        <span class="metadata-label">File Size:</span>
+        <span class="metadata-value" id="meta-size">-</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

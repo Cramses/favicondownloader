@@ -1,0 +1,279 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 380px;
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', 'Droid Sans Mono', 'Source Code Pro', monospace;
+  margin: 0;
+  background: #0d1117;
+  color: #c9d1d9;
+}
+
+.container {
+  padding: 16px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #30363d;
+}
+
+.header-icon {
+  width: 20px;
+  height: 20px;
+  color: #58a6ff;
+}
+
+h1 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #c9d1d9;
+  letter-spacing: -0.02em;
+}
+
+.favicon-section {
+  margin-bottom: 16px;
+}
+
+.preview-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.preview-container {
+  flex-shrink: 0;
+}
+
+.preview-container img {
+  width: 48px;
+  height: 48px;
+  border-radius: 4px;
+  border: 1px solid #30363d;
+  background: #0d1117;
+}
+
+.preview-placeholder {
+  width: 48px;
+  height: 48px;
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.preview-placeholder svg {
+  width: 24px;
+  height: 24px;
+  color: #484f58;
+}
+
+.favicon-info {
+  flex: 1;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.favicon-info .label {
+  color: #8b949e;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 0.5px;
+}
+
+.favicon-info .value {
+  color: #c9d1d9;
+  font-family: 'SF Mono', monospace;
+  margin-top: 2px;
+  word-break: break-all;
+}
+
+.section-title {
+  font-size: 11px;
+  color: #8b949e;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.formats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.format-option {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 10px;
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 150ms;
+  font-size: 11px;
+}
+
+.format-option:hover {
+  border-color: #58a6ff;
+  background: #0d1117;
+}
+
+.format-option input[type="checkbox"] {
+  margin: 0;
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+  accent-color: #58a6ff;
+}
+
+.format-label {
+  color: #c9d1d9;
+  cursor: pointer;
+  user-select: none;
+  flex: 1;
+}
+
+.format-size {
+  color: #8b949e;
+  font-size: 10px;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border: 1px solid #30363d;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 150ms;
+  font-size: 12px;
+  font-family: inherit;
+  background: #21262d;
+  color: #c9d1d9;
+  font-weight: 500;
+}
+
+.btn:hover:not(:disabled) {
+  background: #30363d;
+  border-color: #58a6ff;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: #238636;
+  border-color: #238636;
+  color: #ffffff;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #2ea043;
+  border-color: #2ea043;
+}
+
+.btn svg {
+  width: 14px;
+  height: 14px;
+}
+
+.btn-secondary {
+  background: transparent;
+  border-color: #30363d;
+}
+
+.divider {
+  height: 1px;
+  background: #30363d;
+  margin: 12px 0;
+}
+
+.metadata {
+  font-size: 11px;
+  line-height: 1.6;
+  color: #8b949e;
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.metadata-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.metadata-row:last-child {
+  margin-bottom: 0;
+}
+
+.metadata-label {
+  color: #8b949e;
+}
+
+.metadata-value {
+  color: #c9d1d9;
+  font-family: 'SF Mono', monospace;
+}
+
+#status {
+  margin-top: 12px;
+  text-align: center;
+  font-size: 11px;
+  color: #8b949e;
+  padding: 8px;
+  border-radius: 4px;
+  background: #161b22;
+  border: 1px solid #30363d;
+}
+
+#status.error {
+  color: #f85149;
+  border-color: #da3633;
+  background: rgba(248, 81, 73, 0.1);
+}
+
+#status.success {
+  color: #56d364;
+  border-color: #238636;
+  background: rgba(46, 160, 67, 0.1);
+}
+
+#status.loading {
+  color: #58a6ff;
+  border-color: #1f6feb;
+  background: rgba(88, 166, 255, 0.1);
+}
+
+#status:empty {
+  display: none;
+}
