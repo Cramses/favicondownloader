@@ -1,0 +1,16 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="64" cy="64" r="60" fill="#0d1117"/>
+  <circle cx="64" cy="64" r="60" stroke="#58a6ff" stroke-width="4"/>
+
+  <!-- Image/favicon icon in top half -->
+  <rect x="36" y="28" width="56" height="40" rx="4" fill="#161b22" stroke="#30363d" stroke-width="2"/>
+  <circle cx="50" cy="44" r="6" fill="#58a6ff"/>
+  <path d="M 48 58 L 56 50 L 68 62 L 84 46 L 88 50 L 88 64 L 40 64 L 40 58 Z" fill="#30363d"/>
+
+  <!-- Download arrow in bottom half -->
+  <path d="M 64 74 L 64 98 M 54 88 L 64 98 L 74 88" stroke="#58a6ff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Download tray -->
+  <path d="M 42 102 L 42 106 C 42 108 43 110 46 110 L 82 110 C 85 110 86 108 86 106 L 86 102" stroke="#58a6ff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
